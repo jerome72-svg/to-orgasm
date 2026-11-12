@@ -224,15 +224,20 @@ h1 em {
   border-radius: 50%;
 }
 
+
 .hero-cover {
   position: relative;
   z-index: 1;
+  display: block;
   width: min(320px, 80%);
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  flex-shrink: 0;
   box-shadow: 20px 28px 55px rgba(41, 26, 25, 0.23);
   transform: rotate(2deg);
 }
+
 
 .cover-caption {
   z-index: 1;
@@ -846,13 +851,36 @@ h1 em {
     font-size: 13px;
   }
 
-  .hero-visual {
-    min-height: 390px;
-  }
+  
+.hero-visual {
+  position: relative;
+  min-height: 620px;
+  padding: 45px 0 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
 
-  .hero-cover {
-    width: min(255px, 70%);
-  }
+
+  
+
+.hero-cover {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(320px, 80%);
+  height: auto;
+  max-height: none;
+  aspect-ratio: unset;
+  object-fit: contain;
+  flex-shrink: 0;
+  box-shadow: 20px 28px 55px rgba(41, 26, 25, 0.23);
+  transform: rotate(2deg);
+}
+
+
 
   .cover-glow {
     width: 240px;
